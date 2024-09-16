@@ -26,7 +26,7 @@
 }
 
 .cardOverlay {
-  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for better contrast */
   color: #66FCF1; /* Accent color */
   padding: 30px; /* Padding for better spacing */
   border-radius: 10px;

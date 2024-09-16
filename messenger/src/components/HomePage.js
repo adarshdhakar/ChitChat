@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import Navbar from './NavBar';
 import HeroSection from './HeroSection';
 import Features from './Features';
@@ -7,7 +7,13 @@ import Footer from './Footer';
 import HowItWorks from './HowItWorks';
 import Pricing from './Pricing';
 
+import React, { useEffect } from 'react';
+
 const HomePage = () => {
+  useEffect(() => {
+    // Import Bootstrap JavaScript
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+  }, []);
   return (
     <>
       <Navbar />

@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <a className="nav-link" aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,10 +30,10 @@ const Navbar = () => {
               <a className="nav-link" href="#">AI Assist</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">About</a>
+              <a className="nav-link" aria-current="page" href="#">About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="#" aria-disabled="true">Contact</a>
+              <a className="nav-link" href="#" aria-disabled="true">Contact</a>
             </li>
           </ul>
           <form className="d-flex" role="search">
