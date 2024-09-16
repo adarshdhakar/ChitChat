@@ -1,23 +1,60 @@
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #689d99, #000e0d);
 }
 
-/* src/styles/global.css */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #f0f0f0;
+    /* background: linear-gradient(to bottom, #689d99, #000e0d); Gradient background */
+    min-height: 100vh; /* Ensures that the background extends to the full height of the viewport */
+    display: flex;
+    flex-direction: column;
 }
 
-/* For a gradient background */
-body {
-    background: linear-gradient(to bottom, lightgray, gray); /* Light cyan to white */
+.main-content {
+    flex: 1; /* Allows this section to expand and push the footer down */
 }
-  
-h1 {
-    color: #333;
-}
-  
+
 .container {
     padding: 20px;
+    flex-grow: 1; /* Allows the container to expand and take up available space */
+}
+
+.Title {
+    font-size: 60px;
+    color: #66FCF1;
+    text-shadow: 5px 5px 5px #0B0C10;
+    text-align: left; /* Align text to the left */
+    margin-top: 100px;
+    margin-left: 125px; /* Adjust margin as needed */
+    margin-bottom: 40px;
+}
+
+
+/* Other styles remain unchanged */
+
+.section {
+    margin-bottom: 40px;
+}
+
+.Testimonials {
+    margin: 60px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Title {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
 }

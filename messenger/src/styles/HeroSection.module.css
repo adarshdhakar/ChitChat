@@ -1,0 +1,70 @@
+.cardContainer {
+  padding: 20px 0; /* Adjusted padding for a balanced look */
+  margin-right: 10px;
+}
+
+.cardStyle {
+  background-image: url("https://img.freepik.com/free-vector/work-chat-concept-illustration_114360-1071.jpg?t=st=1726386041~exp=1726389641~hmac=8d75bd52fcb199821ea87ae1e91b936bb1dff5b657e0d549bc65e58047dfe069&w=996");
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  color: black;
+  height: 400px; /* Increased height for more content space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; /* More padding for better layout */
+  position: relative;
+  border-radius: 15px; /* Increased border radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.cardStyle:hover {
+  transform: scale(1.05); /* Slightly increased zoom effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.cardOverlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+  color: #66FCF1; /* Accent color */
+  padding: 30px; /* Padding for better spacing */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cardText {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: bold; /* Bold for emphasis */
+  line-height: 1.4; /* Better line spacing */
+}
+
+.buttonContainer {
+  margin-top: 20px; /* Space between text and buttons */
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #45A29E; /* Button background color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px; /* Space between buttons */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.button:hover {
+  background-color: #66FCF1; /* Button color on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.getStarted {
+  background-color: #2f827e; /* Get Started button color */
+}
+
+.learnMore {
+  background-color: #5cc4bd; /* Learn More button color */
+}

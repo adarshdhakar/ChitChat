@@ -1,0 +1,55 @@
+/* navbar.css */
+
+.custom-navbar {
+  background-color: #1F2833;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  color: #66FCF1;
+  font-size: 1.5rem; 
+}
+
+.nav-link {
+  color: #C5C6C7;
+}
+
+.nav-link:hover {
+  color: #66FCF1;
+}
+
+.custom-search-button {
+  color: #45A29E;
+  border-color: #45A29E;
+}
+
+.custom-search-button:hover {
+  background-color: #45A29E;
+  color: #0B0C10;
+}
+
+/* Additional styling for profile dropdown if needed */
+.nav-item.dropdown .dropdown-menu {
+  background-color: #1F2833;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item {
+  color: #C5C6C7;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #66FCF1;
+  color: #0B0C10;
+}
+
+.nav-item .fa-user {
+  color: #C5C6C7; /* Icon color */
+  font-size: 1.25rem; /* Adjust icon size */
+}
+
+.nav-item .fa-user:hover {
+  color: #66FCF1; /* Icon color on hover */
+}

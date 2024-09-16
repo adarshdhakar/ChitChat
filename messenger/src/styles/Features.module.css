@@ -1,0 +1,30 @@
+.featuresContainer {
+  background-color: #45A29E; /* Background color for the overall container */
+  padding: 20px 20px; /* Increased padding for breathing space */
+  border-radius: 15px; /* Larger border radius for a modern look */
+  margin-top: 0px; /* Spacing from the top */
+}
+
+.featureBox {
+  background-color: #1F2833; /* Background color for each feature box */
+  color: #C5C6C7; /* Light text color */
+  text-align: center; /* Center the text */
+  padding: 50px 20px; /* Increased padding for spacious design */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for more depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition on hover */
+  margin: 15px 0; /* Increased margin for space between boxes */
+  margin-left: 30px;
+  margin-top: 35px
+}
+
+.featureBox p {
+  font-size: 24px; /* Larger font size for readability */
+  margin: 0;
+  font-weight: 600; /* Bold text for emphasis */
+}
+
+.featureBox:hover {
+  transform: scale(1.03); /* Increased zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}

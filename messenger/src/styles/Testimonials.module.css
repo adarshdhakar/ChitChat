@@ -1,0 +1,14 @@
+.carouselContainer {
+    max-width: 700px; /* Limit the width of the entire carousel */
+    margin: auto;     /* Center the carousel */
+    background-color: #174341;
+    border-radius: 20px;
+  }
+  
+  .carouselImage {
+    padding: 10px;
+    height: 400px;    /* Set a smaller height for the carousel images */
+    object-fit: fill; /* Ensure images are cropped proportionally */
+    border-radius: 20px;
+  }
+  

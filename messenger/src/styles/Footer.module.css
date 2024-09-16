@@ -1,0 +1,27 @@
+.footer {
+    background-color: #1f2833; /* Or your preferred background color */
+  }
+  
+  .footer a {
+    color: #66fcf1; /* Your link color */
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer h5 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer .btn-primary {
+    background-color: #45a29e; /* Your button color */
+    border-color: #45a29e; /* Ensure border matches button color */
+  }
+  
+  
