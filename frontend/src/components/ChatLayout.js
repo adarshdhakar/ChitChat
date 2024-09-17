@@ -24,10 +24,10 @@ const ChatLayout = () => {
       <div className="conversation-list">
         <h5 className="mb-3">Conversations</h5>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item active">John Doe</li>
-          <li className="list-group-item">Jane Smith</li>
-          <li className="list-group-item">Team Alpha</li>
-          <li className="list-group-item">AI Bot</li>
+          <li className="list-group-item active">Arushi Dhakar</li>
+          <li className="list-group-item">Harsh Maurya</li>
+          <li className="list-group-item">Avik Sarkar</li>
+          <li className="list-group-item">Om Prakash Behera</li>
         </ul>
       </div>
 

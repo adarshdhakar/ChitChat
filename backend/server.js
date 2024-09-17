@@ -57,23 +57,22 @@ app.use(passport.session());
 passport.use(new LocalStrategy(
   { usernameField: 'email' }, // Ensure email is used as the username field
   async (email, password, done) => {
-      try {
-          const user = await User.findOne({ email });
-          if (!user) {
-              return done(null, false, { message: 'Incorrect email.' });
-          }
-          // Use the User.authenticate method to compare the password
-          User.authenticate()(password, user.password, (err, isMatch) => {
-            if (err) return done(err);
-            if (!isMatch) return done(null, false, { message: 'Incorrect password.' });
-            return done(null, user);
-          });
-      } catch (err) {
-          return done(err);
+    try {
+      const user = await User.findOne({ email });
+      if (!user) {
+        return done(null, false, { message: 'Incorrect email.' });
       }
+      // Use the authenticate method from passport-local-mongoose
+      user.authenticate(password, (err, isMatch) => {
+        if (err) return done(err);
+        if (!isMatch) return done(null, false, { message: 'Incorrect password.' });
+        return done(null, user);
+      });
+    } catch (err) {
+      return done(err);
+    }
   }
 ));
-
 
 passport.serializeUser((user, done) => {
   done(null, user.id);

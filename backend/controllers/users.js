@@ -16,6 +16,7 @@ module.exports.signup = async (req, res, next) => {
 };
 
 module.exports.login = async (req, res) => {
+    console.log(req);
     req.flash("success", "Welcome back!");
     const redirectUrl = res.locals.redirectUrl || "/"; // Redirect URL after successful login
     res.status(200).json({ message: "Login successful", redirectUrl });
