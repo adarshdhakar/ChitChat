@@ -2,7 +2,8 @@
 import BoilerPlate from '../components/BoilerPlate';
 import HomePage from '../components/HomePage';
 
-export default function Home() {
+export default async function Home() {
+  
   return (
     <BoilerPlate>
       <HomePage />

@@ -5,7 +5,7 @@ const Features = () => {
     return (
         <>
         <div className={styles.featuresContainer}>
-            <div className="row gx-4 gy-4"> {/* Added Bootstrap classes for better gap control */}
+            <div className="row gx-4 gy-4"> 
                 <div className={`col-md-5 ${styles.featureBox}`}>
                     <p>Real-Time Chatting</p>
                 </div>
@@ -13,7 +13,7 @@ const Features = () => {
                     <p>Group Chats</p>
                 </div>
             </div>
-            <div className="row gx-4 gy-4"> {/* Added horizontal and vertical gaps */}
+            <div className="row gx-4 gy-4"> 
                 <div className={`col-md-5 ${styles.featureBox}`}>
                     <p>Video and Audio Calls</p>
                 </div>

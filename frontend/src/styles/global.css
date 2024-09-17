@@ -58,3 +58,11 @@ body {
         margin-bottom: 30px;
     }
 }
+
+.customImage {
+    width: 100px; /* Set the width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+    margin-left: 10px; /* Add space between text and image */
+  }
+  

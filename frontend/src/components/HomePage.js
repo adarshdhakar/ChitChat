@@ -6,7 +6,7 @@ import Testimonials from './Testimonials';
 import Footer from './Footer';
 import HowItWorks from './HowItWorks';
 import Pricing from './Pricing';
-
+import Format from './Format';
 import React, { useEffect } from 'react';
 
 const HomePage = () => {
@@ -16,9 +16,10 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <Navbar />
-      <div className="Title">
-        <h1>Welcome to ChitChat...</h1>
+    <Format>
+    <div className="Title">
+        <h1 className="d-flex"><div>Welcome to ChitChat...</div></h1>
+        {/* <img src = "Screenshot_17-9-2024_173521_.jpeg" className = "customImage"></img> */}
       </div>
 
       <div className="container">
@@ -40,9 +41,11 @@ const HomePage = () => {
           <Pricing/>
         </div>
       </div>
-      <Footer />
+    </Format>
     </>
   );
 };
 
 export default HomePage;
+
+
