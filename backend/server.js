@@ -11,6 +11,9 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
 const userRouter = require('./routes/user');
+const pagesRouter = require('./routes/pages');
+const chatRouter = require('./routes/chats.js');
+
 dotenv.config(); // Load environment variables
 
 const app = express();
@@ -51,29 +54,26 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-// passport.use(new LocalStrategy(User.authenticate()));
-
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
-
 passport.use(new LocalStrategy(
+  { usernameField: 'email' }, // Ensure email is used as the username field
   async (email, password, done) => {
       try {
           const user = await User.findOne({ email });
           if (!user) {
               return done(null, false, { message: 'Incorrect email.' });
           }
-          const isMatch = await user.authenticate(password); // Assuming you have this method
-          if (!isMatch) {
-              return done(null, false, { message: 'Incorrect password.' });
-          }
-          return done(null, user);
+          // Use the User.authenticate method to compare the password
+          User.authenticate()(password, user.password, (err, isMatch) => {
+            if (err) return done(err);
+            if (!isMatch) return done(null, false, { message: 'Incorrect password.' });
+            return done(null, user);
+          });
       } catch (err) {
           return done(err);
       }
   }
 ));
+
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
@@ -87,6 +87,8 @@ passport.deserializeUser(async (id, done) => {
       done(err);
   }
 });
+
+app.use('/api/chat', chatRouter);
 
 // Use the pages routes
 app.use('/api/pages', pagesRouter);

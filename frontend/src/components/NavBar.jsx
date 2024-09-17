@@ -21,7 +21,7 @@ const Navbar = () => {
                 Features
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Start Chatting</a></li>
+                <li><a className="dropdown-item" href="/chat">Start Chatting</a></li>
                 <li><a className="dropdown-item" href="#">Create a Group</a></li>
                 <li><hr className="dropdown-divider" /></li>
                 <li><a className="dropdown-item" href="#">Coming Soon</a></li>

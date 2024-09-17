@@ -1,0 +1,55 @@
+/* Ensure the layout takes up the entire viewport height */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Space for the navbar */
+.navbar-space {
+  height: 60px; /* Adjust height for your navbar */
+}
+
+/* Conversation List - Fixed to the left */
+.conversation-list {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 25%;
+  height: calc(100% - 60px);
+  background-color: #f8f9fa; /* Bootstrap light background */
+  border-right: 1px solid #dee2e6; /* Border to separate from message view */
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* Message View - Scrollable */
+.message-view {
+  margin-left: 25%;
+  margin-top: 60px;
+  height: calc(100% - 120px); /* Leave space for the input form */
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* Messages container for the list of messages */
+.messages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Message Input Form - Fixed at the bottom */
+.message-input-form {
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  width: 75%;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Style the input group */
+.input-group {
+  display: flex;
+}
