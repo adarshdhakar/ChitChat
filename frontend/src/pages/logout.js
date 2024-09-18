@@ -1,15 +1,33 @@
-import { useEffect } from 'react';
+// frontend/src/pages/logout.jsx
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-const LogoutPage = () => {
+const Logout = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to the home page on component mount
-    router.push('/');
+    const logout = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/users/logout', {
+          method: 'POST',
+          credentials: 'include', // Important for sending cookies
+        });
+
+        if (response.ok) {
+          router.push('/login'); // Redirect after successful logout
+        } else {
+          alert('Logout failed');
+        }
+      } catch (error) {
+        console.error('Logout error:', error);
+        alert('An error occurred during logout.');
+      }
+    };
+
+    logout();
   }, [router]);
 
-  return null; // No need to render anything
+  return null; // No UI to render
 };
 
-export default LogoutPage;
+export default Logout;

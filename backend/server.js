@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
 const cors = require('cors');
+const MongoStore = require('connect-mongo');
 // backend/server.js
 
 const mongoose = require('mongoose');
@@ -29,7 +30,16 @@ const io = socketIO(server, {
   },
 });
 
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000', // Frontend origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // Allow credentials (cookies) to be sent
+};
+
+// Apply CORS middleware with the defined options
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Socket.io connection
@@ -73,6 +83,7 @@ const sessionOptions = {
   secret: process.env.SESSION_SECRET || "mysupersecretcode",
   resave: false,
   saveUninitialized: false,
+  store: MongoStore.create({ mongoUrl: MONGO_URL }),
   cookie: {
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000, // 1 week
     maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -82,13 +93,17 @@ const sessionOptions = {
   },
 };
 
-// Apply middlewares
+// Apply session middleware
 app.use(session(sessionOptions));
 app.use(flash());
 
+// Initialize Passport and session
 app.use(passport.initialize());
 app.use(passport.session());
 
+// ... [Passport strategy and serialization/deserialization]
+
+// Ensure Passport LocalStrategy uses correct field
 passport.use(new LocalStrategy(
   { usernameField: 'email' }, // Ensure email is used as the username field
   async (email, password, done) => {
@@ -97,7 +112,7 @@ passport.use(new LocalStrategy(
       if (!user) {
         return done(null, false, { message: 'Incorrect email.' });
       }
-      // Use the authenticate method from passport-local-mongoose
+      // Use the authenticate method from passport-local-mongoose or define it in your User model
       user.authenticate(password, (err, isMatch) => {
         if (err) return done(err);
         if (!isMatch) return done(null, false, { message: 'Incorrect password.' });
@@ -109,28 +124,30 @@ passport.use(new LocalStrategy(
   }
 ));
 
+// Serialization and deserialization
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 
 passport.deserializeUser(async (id, done) => {
   try {
-      const user = await User.findById(id);
-      done(null, user);
+    const user = await User.findById(id);
+    done(null, user);
   } catch (err) {
-      done(err);
+    done(err);
   }
 });
-
-app.use('/api/auth', authRouter);
-
-app.use('/api/chat', chatRouter);
 
 // Use the pages routes
 app.use('/api/pages', pagesRouter);
 
 // Routes
 app.use('/api/users', userRouter); // Prefix user routes with /api/users
+
+app.use('/api/auth', authRouter);
+
+app.use('/api/chat', chatRouter);
+
 
 // Default route for testing
 app.get('/', (req, res) => {

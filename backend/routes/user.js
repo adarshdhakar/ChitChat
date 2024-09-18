@@ -16,6 +16,8 @@ router.get("/login", (req, res) => {
   }
   res.redirect('/login');  // Redirect to Next.js login page
 });
+
+
 router.post(
   "/login",
   passport.authenticate("local", {
@@ -24,9 +26,18 @@ router.post(
   }),
   userController.login
 );
+// router.post('/login', passport.authenticate('local'), (req, res) => {
+  // res.status(200).json({ message: 'Logged in successfully', user: req.user });
+// });
 
 // Route to handle user logout (GET)
-router.get("/logout", userController.logout);
+// router.get("/logout", userController.logout);
+router.post('/logout', (req, res) => {
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.status(200).json({ message: 'Logged out successfully' });
+  });
+});
 
 // Optional route to handle failed login
 router.get("/login-failed", (req, res) => {

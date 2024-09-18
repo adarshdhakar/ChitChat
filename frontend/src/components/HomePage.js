@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className="text-center my-5 mt-5">
           {/* <h1 className="display-4 fw-bold mb-4 text-light">Welcome to ChitChat...</h1> */}
           <div className="Title">
-          <h1 className="d-flex">
+          <h1>
             <div>Welcome to ChitChat...</div>
           </h1>
         </div>
