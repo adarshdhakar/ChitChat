@@ -1,6 +1,6 @@
-import BoilerPlate from '../components/BoilerPlate';
-import Format from '../components/Format';
-import ChatLayout from '../components/ChatLayout';
+import BoilerPlate from '../../components/BoilerPlate';
+import Format from '../../components/Format';
+import ChatLayout from '../../components/ChatLayout';
 
 const Chat = () => {
   return (

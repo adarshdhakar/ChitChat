@@ -1,11 +1,12 @@
+// routes/chat.js
 const express = require("express");
 const router = express.Router();
+const chatController = require("../controllers/chat");
 
-// Chat layout route
-router.get("/chat", (req, res) => {
-  // Sample response (you could add real-time features like WebSocket later)
-  res.json({ message: "Welcome to the chat room!" });
-// res.redirect('/chat');
-});
+// Route to get chat history for a specific room
+router.get("/history", chatController.getChatHistory);
+
+// Route to post a new message
+router.post("/message", chatController.postMessage);
 
 module.exports = router;

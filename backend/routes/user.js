@@ -25,8 +25,23 @@ router.post(
   userController.login
 );
 
-// Route to handle user logout (GET)
-router.get("/logout", userController.logout);
+
+// Route to check authentication status
+router.get('/auth-status', (req, res) => {
+  if (req.isAuthenticated()) {
+    res.status(200).json({ isAuthenticated: true, user: req.user });
+  } else {
+    res.status(200).json({ isAuthenticated: false });
+  }
+});
+
+// Logout route
+router.post('/logout', (req, res, next) => {
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.status(200).json({ message: 'Logged out successfully' });
+  });
+});
 
 // Optional route to handle failed login
 router.get("/login-failed", (req, res) => {
