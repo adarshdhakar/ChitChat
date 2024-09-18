@@ -16,6 +16,8 @@ const User = require("./models/user.js");
 const userRouter = require('./routes/user');
 const pagesRouter = require('./routes/pages');
 const chatRouter = require('./routes/chats.js');
+const authRouter = require('./routes/auth.js');
+require('./passport-config')(passport); // Passport configuration file
 
 dotenv.config(); 
 const app = express();
@@ -119,6 +121,8 @@ passport.deserializeUser(async (id, done) => {
       done(err);
   }
 });
+
+app.use('/api/auth', authRouter);
 
 app.use('/api/chat', chatRouter);
 

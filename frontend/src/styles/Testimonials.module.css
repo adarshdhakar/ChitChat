@@ -7,7 +7,8 @@
   
   .carouselImage {
     padding: 15px;
-    padding-left: 55px; 
+    padding: auto;
+    margin: auto;
     height: 400px;    /* Set a smaller height for the carousel images */
     object-fit: fill; /* Ensure images are cropped proportionally */
     border-radius: 20px;

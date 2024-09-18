@@ -1,11 +1,9 @@
 import React from 'react';
 import BoilerPlate from '../components/BoilerPlate';
-import Format from '../components/Format';
 
 const About = () => {
     return (
         <BoilerPlate>
-            <Format>
                 <div className="container mt-5 bg p-4 rounded shadow-sm">
                     <h1 className="mb-4 text-dark">About Us</h1>
                     <p className="text-dark">Welcome to Chat Forge, the ultimate messaging service designed to connect people effortlessly. Our mission is to provide a seamless and engaging communication experience through our platform.</p>
@@ -26,7 +24,6 @@ const About = () => {
                     <h2 className="text-dark">What's Next</h2>
                     <p className="text-dark">We are continuously working on enhancing our platform with new features and improvements. Stay tuned for updates!</p>
                 </div>
-            </Format>
         </BoilerPlate>
     );
 };

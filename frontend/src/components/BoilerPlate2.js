@@ -1,7 +1,6 @@
 // src/components/BoilerPlate.js
 'use client';
 import Navbar from './NavBar';
-import Footer from './Footer';
 import React from 'react';
 import Head from 'next/head';
 import '../styles/global.css'; // Import custom CSS
@@ -18,7 +17,6 @@ const BoilerPlate = ({ children }) => {
       <main className="main-content">
       <Navbar />
       {children}
-      <Footer />
       </main>
     </>
   );

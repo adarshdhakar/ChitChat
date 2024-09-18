@@ -1,6 +1,8 @@
 .cardContainer {
-  padding: 20px 0; /* Adjusted padding for a balanced look */
+  padding: 20px 20px;
   margin-right: 10px;
+  display: flex;
+  justify-content: center; /* Centers the card on larger screens */
 }
 
 .cardStyle {
@@ -9,62 +11,106 @@
   background-position: center;
   background-color: black;
   color: black;
-  height: 400px; /* Increased height for more content space */
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px; /* More padding for better layout */
+  padding: 40px;
   position: relative;
-  border-radius: 15px; /* Increased border radius */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .cardStyle:hover {
-  transform: scale(1.05); /* Slightly increased zoom effect */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .cardOverlay {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for better contrast */
-  color: #66FCF1; /* Accent color */
-  padding: 30px; /* Padding for better spacing */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #66FCF1;
+  padding: 40px;
   border-radius: 10px;
   text-align: center;
+  margin: auto;
 }
 
 .cardText {
-  font-size: 1.5rem; /* Larger font size */
-  font-weight: bold; /* Bold for emphasis */
-  line-height: 1.4; /* Better line spacing */
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.4;
 }
 
 .buttonContainer {
-  margin-top: 20px; /* Space between text and buttons */
+  margin-top: 20px;
 }
 
 .button {
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background-color: #45A29E; /* Button background color */
+  background-color: #45A29E;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
-  margin: 5px; /* Space between buttons */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
-  background-color: #66FCF1; /* Button color on hover */
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  background-color: #66FCF1;
+  transform: scale(1.03);
 }
 
 .getStarted {
-  background-color: #2f827e; /* Get Started button color */
+  background-color: #2f827e;
 }
 
 .learnMore {
-  background-color: #5cc4bd; /* Learn More button color */
+  background-color: #5cc4bd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .cardStyle {
+    height: auto;
+    padding: 20px;
+  }
+
+  .cardText {
+    font-size: 1.2rem; /* Reduce font size on smaller screens */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Reduce button size */
+    padding: 8px 16px; /* Adjust padding */
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 10px 0; /* Stack buttons vertically */
+  }
+}
+
+@media (max-width: 576px) {
+  .cardStyle {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+  }
+
+  .cardText {
+    font-size: 1rem; /* Further reduce text size */
+  }
+
+  .button {
+    font-size: 0.8rem;
+    padding: 6px 12px; /* Further adjust padding */
+  }
 }
