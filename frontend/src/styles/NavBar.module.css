@@ -1,5 +1,6 @@
-/* navbar.css */
+/* Navbar CSS */
 
+/* Adjustments for custom styling */
 .custom-navbar {
   background-color: #1F2833;
   height: 80px;
@@ -10,7 +11,7 @@
 
 .navbar-brand {
   color: #66FCF1;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 .nav-link {
@@ -31,7 +32,7 @@
   color: #0B0C10;
 }
 
-/* Additional styling for profile dropdown if needed */
+/* Profile dropdown menu */
 .nav-item.dropdown .dropdown-menu {
   background-color: #1F2833;
 }
@@ -45,6 +46,7 @@
   color: #0B0C10;
 }
 
+/* Profile icon */
 .nav-item .fa-user {
   color: #C5C6C7; /* Icon color */
   font-size: 1.25rem; /* Adjust icon size */
@@ -52,4 +54,27 @@
 
 .nav-item .fa-user:hover {
   color: #66FCF1; /* Icon color on hover */
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .custom-navbar {
+    padding: 0 10px;
+  }
+
+  .custom-search-button {
+    font-size: 0.9rem;
+  }
+
+  .fa-user {
+    font-size: 1rem;
+  }
 }

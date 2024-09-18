@@ -26,7 +26,6 @@ module.exports.logout = (req, res, next) => {
     req.logout((err) => {
         if (err) return next(err);
         req.flash("success", "You are logged out!");
-        // res.status(200).json({ message: "Logout successful" });
-        
+        res.status(200).json({ message: "Logout successful" });
     });
 };
