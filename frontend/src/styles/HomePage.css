@@ -32,3 +32,18 @@
     font-size: 2.5rem; /* Adjust font size for smaller screens */
   }
 }
+
+.Title {
+  font-size: 70px !important; /* Font size */
+  font-weight: 700; /* Boldness - you can adjust this value */
+  color: #66FCF1;
+  text-shadow: 5px 5px 5px #0B0C10;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: "Sofadi One", system-ui; */
+}
+
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import BoilerPlate from '../components/BoilerPlate';
+import BoilerPlate from '../../components/BoilerPlate';
 
 const About = () => {
     return (

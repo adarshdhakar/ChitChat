@@ -11,7 +11,7 @@ const CheckAuthPage = () => {
         const data = await response.json();
         
         if (data.isAuthenticated) {
-          router.push('/dashboard'); // Redirect to the authenticated page
+          router.push('/'); // Redirect to the authenticated page
         } else {
           router.push('/login'); // Redirect to the login page
         }

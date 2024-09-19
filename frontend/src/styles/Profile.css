@@ -1,0 +1,74 @@
+.profile-edit-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-edit-container h2 {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust font size */
+    color: #333; /* Darker color for better readability */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Increased margin for spacing */
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px; /* Adjusted margin for label spacing */
+    color: #333; /* Darker color for labels */
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Adjusted font size for better readability */
+  }
+  
+  .profile-image-preview {
+    margin-top: 15px; /* Increased margin for spacing */
+    text-align: center; /* Center the preview image */
+  }
+  
+  .profile-image-preview img {
+    border-radius: 50%; /* Make the preview image circular */
+    border: 2px solid #ddd; /* Add a border around the image */
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    font-size: 0.875rem; /* Slightly smaller font size for error messages */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Button font size */
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .btn-primary:disabled {
+    background-color: #b0bec5; /* Disabled button color */
+    cursor: not-allowed;
+  }
+  

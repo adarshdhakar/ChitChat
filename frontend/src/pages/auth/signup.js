@@ -1,5 +1,5 @@
-import BoilerPlate from '../components/BoilerPlate';
-import Signup from '../components/Signup';
+import BoilerPlate from '../../components/BoilerPlate';
+import Signup from '../../components/Signup';
 
 const SignupPage = () => {
   return (

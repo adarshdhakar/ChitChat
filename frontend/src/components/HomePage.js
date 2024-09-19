@@ -7,7 +7,7 @@ import Pricing from "./Pricing";
 import BoilerPlate from "./BoilerPlate";
 import React, { useEffect } from "react";
 import Image from "next/image"; // If using Next.js for image optimization
-import "../styles/HomePage.module.css";
+import "../styles/HomePage.css";
 
 const HomePage = () => {
   useEffect(() => {
@@ -22,17 +22,8 @@ const HomePage = () => {
         <div className="text-center my-5 mt-5">
           {/* <h1 className="display-4 fw-bold mb-4 text-light">Welcome to ChitChat...</h1> */}
           <div className="Title">
-          <h1>
-            <div>Welcome to ChitChat...</div>
-          </h1>
-        </div>
-          {/* <Image 
-            src="/logo.png" 
-            alt="ChitChat Logo" 
-            width={150} 
-            height={150} 
-            className="img-fluid rounded-circle" 
-          /> */}
+            Welcome to ChitChat...
+          </div>  
         </div>
 
         {/* Content Sections */}

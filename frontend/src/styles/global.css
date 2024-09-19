@@ -22,16 +22,6 @@ body {
     flex-grow: 1; /* Allows the container to expand and take up available space */
 }
 
-.Title {
-    font-size: 100px;
-    color: #66FCF1;
-    text-shadow: 5px 5px 5px #0B0C10;
-    text-align: center; /* Align text to the left */
-    margin-top: 100px;
-    /* margin-left: 125px; Adjust margin as needed */
-    margin-bottom: 20px;
-}
-
 
 /* Other styles remain unchanged */
 

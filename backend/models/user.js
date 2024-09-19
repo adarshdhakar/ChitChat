@@ -14,6 +14,10 @@ const userSchema = new Schema({
         unique: true,
         match: [/\S+@\S+\.\S+/, 'Please use a valid email address.'],
     },
+    profileImageUrl: {
+        type: String,
+        default: null, // Default to null if no profile image is set
+    },
     createdAt: {
         type: Date,
         default: Date.now,
