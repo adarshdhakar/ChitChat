@@ -6,7 +6,7 @@ This project utilizes several key libraries and technologies. Below is a list of
 
 - **Next.js**
   - *Purpose*: Framework for server-rendered React applications.
-  - *Rationale*: Provides optimal performance, SEO benefits, and a streamlined development experience.
+  - *Rationale*: Provides optimal performance, and a streamlined development experience, with functionalities of React
 
 - **React**
   - *Purpose*: JavaScript library for building user interfaces.
@@ -50,35 +50,24 @@ This project utilizes several key libraries and technologies. Below is a list of
   - *Purpose*: Cloud-based image and video management service.
   - *Rationale*: Efficiently handles media uploads, storage, and delivery with robust APIs.
 
-## AI-powered Chatbot (Optional)
+## AI-powered Chatbot 
 
-- **OpenAI API**
+- **Botpress**
   - *Purpose*: Provides AI-driven conversational capabilities.
   - *Rationale*: Enhances user interaction with intelligent and context-aware responses.
 
-## Video/Audio Calling (Optional)
+## Video/Audio Calling 
 
 - **WebRTC**
   - *Purpose*: Enables real-time communication capabilities in web browsers.
   - *Rationale*: Facilitates peer-to-peer audio and video communication without the need for plugins.
 
-## State Management
-
-- **Redux**
-  - *Purpose*: Predictable state container for JavaScript apps.
-  - *Rationale*: Manages complex state changes in the application, ensuring consistency and ease of debugging.
-
 ## Styling
 
-- **Tailwind CSS**
+- **Bootstrap and React-Bootstrap**
   - *Purpose*: Utility-first CSS framework for rapid UI development.
   - *Rationale*: Allows for fast and responsive design with minimal custom CSS.
 
-## Testing
-
-- **Jest**
-  - *Purpose*: JavaScript testing framework.
-  - *Rationale*: Provides a robust testing environment to ensure code reliability and correctness.
 
 ## Additional Libraries
 - **Axios**: For making HTTP requests from the frontend to the backend.

@@ -38,32 +38,30 @@ The application includes optional features like an AI-powered chatbot and video 
 - Video calling
 
 ## System Design
-For a detailed system design, refer to the [System Design Document]().
+For a detailed system design, refer to the [System Design Document](./docs/System_Design_Document.md).
 
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd chit-chat
-
-2. Open two command prompts at this location:
-    (or split the terminal)
-    cd front-end
-    cd back-end
+   git clone (https://github.com/adarshdhakar/ChitChat.git)
+   cd ChitChat
 
 2. Install dependencies:
-    for each of them run 
     npm install
 
 3. Configure environment variables (create a .env file):
-    MONGODB_URI=<your-mongodb-uri>
-    CLOUDINARY_URL=<your-cloudinary-url>
-    SESSION_SECRET=<your-session-secret>
+    NEXT_PUBLIC_SOCKET_URL=<http://localhost:3000>
+    NEXT_PUBLIC_API_URL=<http://localhost:5000>
+    CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
+    CLOUDINARY_API_KEY=<your-cloudinary-api-key>
+    CLOUDINARY_API_SECRET=<your-api-secret>
+    EMAIL_USER=<your-gmail-id>
+    EMAIL_PASS=<your-gmail-app-password>
+    ATLASDB_URL=<your-atlasdb-url>
+    SECRET=<your-session-secret>
 
 4. Run the application:
-    frontend one with -> npm run dev
-    backend one with -> nodemon server.js
-    (assuming you have npm and nodemon already available on your machine)
+    npm start
 
 The application will be available at http://localhost:3000.
 
@@ -78,17 +76,14 @@ Logout: POST /api/auth/logout
 
 ### User Profile
 Get User Profile: GET /api/users/:userId
-Edit User Profile: PUT /api/users/:userId
 Upload Profile Picture: POST /api/users/:userId/profile-picture
 
 ### Chats
-Get Chats with a Person: GET /api/chats/person/:userId
 Create Chat: POST /api/chats
 
 ### Voice & Video Calls
 Initiate Voice Call: POST /api/calls/voice
 Initiate Video Call: POST /api/calls/video
-End Call: POST /api/calls/:callId/end
 
 ### Dependencies
 Next.js: For server-rendered React applications.
@@ -115,18 +110,3 @@ support@ChitChatgmail.com
 or 
 
 adarshdhakar288@gmail.com
-
-
-## Security Considerations
-Password Hashing: User passwords are hashed using bcrypt before storage.
-JWT Security: Tokens are securely signed and have an expiration time to prevent unauthorized access.
-Input Validation: All inputs are validated to prevent injection attacks and ensure data integrity.
-HTTPS: The application should be served over HTTPS to encrypt data in transit.
-
-## Scalability and Performance
-Horizontal Scaling: The backend can be scaled horizontally by adding more instances behind a load balancer.
-Database Indexing: Proper indexing in MongoDB ensures efficient query performance.
-Caching: Implementing caching strategies (e.g., Redis) can reduce database load and improve response times.
-
-## Conclusion
-The Chit Chat messaging service is built with a focus on real-time communication, scalability, and user experience. The chosen technology stack and architecture ensure a robust and maintainable system capable of handling current requirements and future enhancements.

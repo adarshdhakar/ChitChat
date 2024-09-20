@@ -10,37 +10,26 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository:
    ```bash
-   git clone ()
-   cd chit-chat
-
-2. Open two command prompts at this location:
-    (or split the terminal)
-    cd front-end
-    cd back-end
+   git clone (https://github.com/adarshdhakar/ChitChat.git)
+   cd ChitChat
 
 2. Install dependencies:
-    for each of them run 
     npm install
 
 3. Configure environment variables (create a .env file):
-    MONGODB_URI=<your-mongodb-uri>
-    CLOUDINARY_URL=<your-cloudinary-url>
-    SESSION_SECRET=<your-session-secret>
+    NEXT_PUBLIC_SOCKET_URL=<http://localhost:3000>
+    NEXT_PUBLIC_API_URL=<http://localhost:5000>
+    CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
+    CLOUDINARY_API_KEY=<your-cloudinary-api-key>
+    CLOUDINARY_API_SECRET=<your-api-secret>
+    EMAIL_USER=<your-gmail-id>
+    EMAIL_PASS=<your-gmail-app-password>
+    ATLASDB_URL=<your-atlasdb-url>
+    SECRET=<your-session-secret>
 
 4. Run the application:
-    frontend one with -> npm run dev
-    backend one with -> nodemon server.js
-    (assuming you have npm and nodemon already available on your machine)
+    npm start
 
 The application will be available at http://localhost:3000.
 
 
-## Additional Configuration
-
-Port Configuration: If you need to run the app on a different port, update the PORT variable in your .env file.
-Database Seeding: If applicable, provide instructions on how to seed the database with initial data.
-
-## Troubleshooting
-
-Common Issues: List common setup issues and how to resolve them.
-Contact for Help: Provide contact information or links to support channels.

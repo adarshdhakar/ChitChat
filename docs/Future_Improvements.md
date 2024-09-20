@@ -4,6 +4,9 @@ While the current prototype of the messaging service is functional and includes 
 
 ## Core Features Enhancements
 
+- **Fetching chats from from previous Rooms**
+  - *Description*: Implement chat saving which has been implented in the backend but the current frontend does not support it.
+
 - **End-to-End Encryption**
   - *Description*: Implement end-to-end encryption to ensure that messages are only readable by the sender and the recipient.
   - *Benefits*: Enhances privacy and security for users.

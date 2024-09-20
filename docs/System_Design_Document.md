@@ -3,21 +3,21 @@
 ## Introduction
 Chit Chat is a real-time messaging service designed to facilitate seamless communication between users. It supports individual messaging, group chats, and includes optional features like an AI-powered chatbot and video calling. The purpose of this document is to outline the system architecture, components, data flow, and API design to provide a comprehensive understanding of the application's structure.
 
-## Architecture Diagram
-![Architecture Diagram](./images/architecture-diagram.png)
-
 ## Technology Stack
 - **Frontend:** Next.js
-- **Backend:** Node.js with Express
+- **Backend:** Node.js
 - **Database:** MongoDB
+- **Authentication:** Passport.js
 - **File Storage:** Cloudinary
 - **Real-time Communication:** Socket.io
+- **Audio/Video Calls:** WebRTC
+- **AI Chatbot:** Botpress
 
 ## Component Breakdown
 
 ### User Authentication
 - **Functionality:** Allows users to register, log in, and manage their sessions.
-- **Implementation:** Utilizes Passport.js for handling authentication strategies, bcrypt for password hashing, and JWT for session management.
+- **Implementation:** Utilizes Passport.js for handling authentication strategies, bcrypt for password hashing, and Express Sessions for session management.
 
 ### Messaging
 - **Functionality:** Enables users to send and receive messages in real-time.
@@ -27,11 +27,11 @@ Chit Chat is a real-time messaging service designed to facilitate seamless commu
 - **Functionality:** Allows users to create and join groups for collective messaging.
 - **Implementation:** Groups are managed through REST APIs, with messages tagged to group IDs. Real-time updates are handled via Socket.io rooms.
 
-### AI-powered Chatbot (Optional)
+### AI-powered Chatbot 
 - **Functionality:** Provides automated responses and assistance to users.
-- **Implementation:** Integrated with OpenAI’s API to generate contextual replies based on user input.
+- **Implementation:** Integrated with BotPress’s API to generate contextual replies based on user input.
 
-### Video Calling (Optional)
+### Video Calling 
 - **Functionality:** Enables users to engage in video or audio calls.
 - **Implementation:** Utilizes WebRTC for peer-to-peer communication, with signaling handled via Socket.io.
 
@@ -40,7 +40,7 @@ Chit Chat is a real-time messaging service designed to facilitate seamless commu
 1. **User Registration/Login**
    - User submits registration/login form.
    - Backend validates and processes the request.
-   - On success, JWT token is issued and stored on the client.
+   - On success, the current user data is stored in .
 
 2. **Sending a Message**
    - User sends a message via the frontend interface.
@@ -57,36 +57,46 @@ Chit Chat is a real-time messaging service designed to facilitate seamless commu
 
 ## REST API Endpoints
 
-| Endpoint               | Method | Description                        |
-|------------------------|--------|------------------------------------|
-| `/api/auth/register`   | POST   | Register a new user                |
-| `/api/auth/login`      | POST   | Authenticate a user                |
-| `/api/messages`        | GET    | Retrieve all messages              |
-| `/api/messages`        | POST   | Send a new message                  |
-| `/api/groups`          | POST   | Create a new group                  |
-| `/api/groups/:id`      | GET    | Retrieve group details              |
-| `/api/chatbot/respond` | POST   | Get chatbot response                |
+## API Endpoints
 
-### Example: Register a New User
+### Authentication
+| Endpoint                | Method | Description                        |
+|-------------------------|--------|------------------------------------|
+| `/api/auth/register`     | POST   | Register a new user                |
+| `/api/auth/login`        | POST   | Authenticate a user                |
+| `/api/auth/logout`       | POST   | Logout the current user            |
+| `/api/auth`              | GET    | Get data of the logged-in user     |
 
-- **Request:**
-  ```http
-  POST /api/auth/register
-  Content-Type: application/json
+### User Profile
+| Endpoint                | Method | Description                        |
+|-------------------------|--------|------------------------------------|
+| `/api/users/:userId`     | GET    | Get the profile of a specific user |
 
-  {
-    "username": "john_doe",
-    "email": "john@example.com",
-    "password": "securePassword123"
-  }
+### Chat
+| Endpoint                | Method | Description                        |
+|-------------------------|--------|------------------------------------|
+| `/api/chats`             | POST   | Create a new chat                  |
+
+### Calls
+| Endpoint                | Method | Description                        |
+|-------------------------|--------|------------------------------------|
+| `/api/calls/voice`       | POST   | Initiate a voice call              |
+| `/api/calls/video`       | POST   | Initiate a video call              |
+
+### AI Assist
+| Endpoint                | Method | Description                        |
+|-------------------------|--------|------------------------------------|
+| `/api/ai`                | GET    | Access the chatbot (AI Assist)     |
+
+### Other
+| Endpoint                | Method | Description                        |
+|-------------------------|--------|------------------------------------|
+| `/api/about`             | GET    | Get about page of ChitChat         |
+| `/api/contact`           | GET    | Get contact us page of ChitChat    |
 
 
-Response
-{
-  "message": "User registered successfully",
-  "user": {
-    "id": "60d0fe4f5311236168a109ca",
-    "username": "john_doe",
-    "email": "john@example.com"
-  }
-}
+
+
+
+
+
