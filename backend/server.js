@@ -5,11 +5,11 @@ const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
 const cors = require('cors');
+const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const mongoose = require('mongoose');
 // const dotenv = require('dotenv');
 const ExpressError = require("./utils/ExpressError.js");
-const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -23,7 +23,6 @@ const userRouter = require('./routes/users.js');
 
 require('./passport-config')(passport); // Passport configuration file
 
-// dotenv.config();
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
@@ -86,11 +85,12 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-const MONGO_URL = process.env.MONGODB_URI || "mongodb://localhost:27017/messenger";
+// const MONGO_URL = process.env.MONGODB_URI || "mongodb://localhost:27017/messenger";
+const dbUrl = process.env.ATLASDB_URL;
 
 async function main() {
   try {
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(dbUrl);
     console.log('MongoDB connected');
   } catch (err) {
     console.error('MongoDB connection error:', err);
@@ -99,11 +99,23 @@ async function main() {
 
 main();
 
+const store = MongoStore.create({
+  mongoUrl: dbUrl,
+  crypto: {
+    secret: process.env.SECRET,
+  },
+  touchAfter: 24 * 3600,
+});
+
+store.on("error", () => {
+  console.log("ERROR in MONGO SESSION STORE", err);
+});
+
 const sessionOptions = {
-  secret: process.env.SESSION_SECRET || "mysupersecretcode",
+  store,
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: MONGO_URL }),
   cookie: {
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000, // 1 week
     maxAge: 7 * 24 * 60 * 60 * 1000,
