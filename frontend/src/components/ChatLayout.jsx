@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import "../styles/ChatLayout.css";
-import Navbar from "./NavBar";
 import BoilerPlate2 from "./BoilerPlate2";
 import Link from 'next/link';
 
@@ -14,8 +13,8 @@ const ChatLayout = ({ chatCode, currentUser }) => {
   const socketRef = useRef(null);
   const messagesEndRef = useRef(null);
   const room = chatCode; // Use chatCode as room name
-  const currentUserAvatar = "https://i.pravatar.cc/150?img=5"; // Placeholder avatar
-  const otherUserAvatar = "https://i.pravatar.cc/150?img=3"; // Placeholder avatar for others
+  const currentUserAvatar = "https://i.pravatar.cc/150?img=3"; // Placeholder avatar
+  const otherUserAvatar = "https://i.pravatar.cc/150?img=5"; // Placeholder avatar for others
 
   useEffect(() => {
     // Initialize Socket.io connection
@@ -69,15 +68,22 @@ const ChatLayout = ({ chatCode, currentUser }) => {
     <BoilerPlate2>
       <div className="chat-container">
         <div className="conversation-list">
-          <h5 className="mb-3">Chat Room: {chatCode}</h5>
+          <h3 className="mb-3">Chat Room</h3>
+          <br/>
+          <br/> 
+          <h5 className="mb-3">Room Id:</h5>
+          <h6>{chatCode}</h6>
+          <br/>
+
           <div className="call-buttons">
-            <Link href={`/calls/voice/${chatCode}`} passHref className = "call">
+          {/* /calls/voice/${chatCode} */}
+            <Link href='/' passHref className = "call">
             <button type = "button" className="btn btn-outline-primary">
               <i className="fas fa-phone-alt"></i>
             </button>
             </Link>
             
-            <Link href={`/calls/video/${chatCode}`} passHref className = "call">
+            <Link href='/' passHref className = "call">
             <button className="btn btn-outline-danger">
               <i className="fas fa-video"></i>
             </button>
@@ -85,7 +91,7 @@ const ChatLayout = ({ chatCode, currentUser }) => {
 
           </div>
         </div>
-
+        {/* <h1>{currentUser}{chatCode}</h1> */}
         <div className="chat-area">
           <div className="message-view">
             <div className="messages-container">

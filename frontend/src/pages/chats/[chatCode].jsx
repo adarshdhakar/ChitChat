@@ -9,8 +9,45 @@ const ChatRoom = () => {
   const router = useRouter();
   const { chatCode } = router.query;
   const [chat, setChat] = useState(null);
-  const [currentUser, setCurrentUser] = useState("You"); // Replace with actual user data
+  // const [currentUser, setCurrentUser] = useState("You"); // Replace with actual user data
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currUser, setCurrUser] = useState(null);
+  const [error, setError] = useState(null); // Define error state
+  const [isLoading, setIsLoading] = useState(true); // Loading state
+
+  const checkAuth = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/auth', {
+        method: 'GET',
+        credentials: 'include',
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsLoggedIn(data.isAuthenticated);
+        setCurrUser(data.user || null); // Safely set user
+
+        if (data.isAuthenticated && data.userId) {
+          // Optionally, you can fetch additional user data here
+        }
+      } else {
+        setIsLoggedIn(false);
+        setCurrUser(null);
+      }
+    } catch (error) {
+      console.error('Error checking authentication:', error);
+      setError('Failed to check authentication.');
+      setIsLoggedIn(false);
+      setCurrUser(null);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  useEffect(() => {
+    checkAuth();
+  },[]);
+  
   // useEffect(() => {
   //   // Fetch current user data (replace with your auth logic)
   //   const fetchUser = async () => {
@@ -60,7 +97,7 @@ const ChatRoom = () => {
   }
 
   return (
-      <ChatLayout chatCode={chatCode} currentUser={currentUser} />
+      <ChatLayout chatCode={chatCode} currentUser={currUser.username} />
   );
 };
 

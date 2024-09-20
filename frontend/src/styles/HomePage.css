@@ -47,3 +47,57 @@
 
 
 
+.chatbot-float-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #66FCF1; /* Color from your palette */
+  border: none;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.chatbot-float-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.chatbot-container.expanded {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30%;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.chatbot-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* border-radius: 50%; */
+}
+
+.chatbot-container.collapsed {
+  display: none;
+}

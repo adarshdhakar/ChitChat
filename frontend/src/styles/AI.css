@@ -1,0 +1,17 @@
+/* Ensure the container takes up the full viewport height */
+.chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Style the iframe */
+  .chatbot-iframe {
+    margin-top: 50px;
+    width: 35%;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+  }
+  
