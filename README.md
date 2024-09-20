@@ -50,15 +50,15 @@ For a detailed system design, refer to the [System Design Document](./docs/Syste
     npm install
 
 3. Configure environment variables (create a .env file):
-    NEXT_PUBLIC_SOCKET_URL=<http://localhost:3000>
-    NEXT_PUBLIC_API_URL=<http://localhost:5000>
-    CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
-    CLOUDINARY_API_KEY=<your-cloudinary-api-key>
-    CLOUDINARY_API_SECRET=<your-api-secret>
-    EMAIL_USER=<your-gmail-id>
-    EMAIL_PASS=<your-gmail-app-password>
-    ATLASDB_URL=<your-atlasdb-url>
-    SECRET=<your-session-secret>
+- NEXT_PUBLIC_SOCKET_URL=<http://localhost:3000>
+- NEXT_PUBLIC_API_URL=<http://localhost:5000>
+- CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
+- CLOUDINARY_API_KEY=<your-cloudinary-api-key>
+- CLOUDINARY_API_SECRET=<your-api-secret>
+- EMAIL_USER=<your-gmail-id>
+- EMAIL_PASS=<your-gmail-app-password>
+- ATLASDB_URL=<your-atlasdb-url>
+- SECRET=<your-session-secret>
 
 4. Run the application:
     npm start
@@ -70,42 +70,43 @@ This application is deployed on (). You can access it at ().
 
 ## API Endpoints
 ### Authentication
-Login: POST /api/auth/login
-Signup: POST /api/auth/signup
-Logout: POST /api/auth/logout
+- Login: POST /api/auth/login
+- Signup: POST /api/auth/signup
+- Logout: POST /api/auth/logout
 
 ### User Profile
-Get User Profile: GET /api/users/:userId
-Upload Profile Picture: POST /api/users/:userId/profile-picture
+- Get User Profile: GET /api/users/:userId
+- Upload Profile Picture: POST /api/users/:userId/profile-picture
 
 ### Chats
-Create Chat: POST /api/chats
+- Create Chat: POST /api/chats
 
 ### Voice & Video Calls
-Initiate Voice Call: POST /api/calls/voice
-Initiate Video Call: POST /api/calls/video
+- Initiate Voice Call: POST /api/calls/voice
+- Initiate Video Call: POST /api/calls/video
 
 ### Dependencies
-Next.js: For server-rendered React applications.
-Node.js: For server-side programming.
-Express: To handle API requests.
-Mongoose: For MongoDB object modeling.
-Passport.js: For user authentication.
-Socket.io: For real-time messaging.
-Cloudinary: For image uploads.
-Multer: For handling multipart/form-data.
+- Next.js: For server-rendered React applications.
+- Node.js: For server-side programming.
+- Express: To handle API requests.
+- Mongoose: For MongoDB object modeling.
+- Passport.js: For user authentication.
+- Socket.io: For real-time messaging.
+- Cloudinary: For image uploads.
+- Multer: For handling multipart/form-data.
 
-Web RTC: For voice and video calls.
-Botpress: For chatbot training and publishing.
+- Web RTC: For voice and video calls.
+- Botpress: For chatbot training and publishing.
 
 ## Future Improvements
-Add end-to-end encryption for messages.
-Implement user blocking and reporting features.
-Enhance the AI chatbot's capabilities.
+- Add end-to-end encryption for messages.
+- Implement user blocking and reporting features.
+- Enhance the AI chatbot's capabilities.
 
 ## Contact
 For any inquiries, please email:
-support@ChitChatgmail.com
+
+chitchathelpdesk@gmail.com
 
 or 
 
