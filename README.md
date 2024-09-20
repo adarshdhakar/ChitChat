@@ -32,10 +32,8 @@ The application includes optional features like an AI-powered chatbot and video 
 - Sending and receiving text messages
 - Group chat functionality
 - Real-time message updates
-
-### Optional Features
 - AI-powered chatbot
-- Video calling
+- Video/Voice calling
 
 ## System Design
 For a detailed system design, refer to the [System Design Document](./docs/System_Design_Document.md).
@@ -43,10 +41,11 @@ For a detailed system design, refer to the [System Design Document](./docs/Syste
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone (https://github.com/adarshdhakar/ChitChat.git)
+   git clone https://github.com/adarshdhakar/ChitChat.git
    cd ChitChat
 
 2. Install dependencies:
+    ```bash
     npm install
 
 3. Configure environment variables (create a .env file):
@@ -61,12 +60,13 @@ For a detailed system design, refer to the [System Design Document](./docs/Syste
 - SECRET=<your-session-secret>
 
 4. Run the application:
+    ```bash
     npm start
 
 The application will be available at http://localhost:3000.
 
 ## Deployment
-This application is deployed on (). You can access it at ().
+This application is deployed on (https://render.com). You can access it at (https://chitchat-wryj.onrender.com/).
 
 ## API Endpoints
 ### Authentication
@@ -110,4 +110,4 @@ chitchathelpdesk@gmail.com
 
 or 
 
-adarshdhakar288@gmail.com
+adarshdhakar277@gmail.com
