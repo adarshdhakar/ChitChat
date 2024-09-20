@@ -83,7 +83,7 @@ const ChatLayout = ({ chatCode, currentUser }) => {
             </button>
             </Link>
             
-            <Link href='/' passHref className = "call">
+            <Link href={`/calls/video/${chatCode}`} passHref className = "call">
             <button className="btn btn-outline-danger">
               <i className="fas fa-video"></i>
             </button>
