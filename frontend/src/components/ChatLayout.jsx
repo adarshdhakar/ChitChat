@@ -7,14 +7,14 @@ import Link from 'next/link';
 
 const SOCKET_SERVER_URL = "http://localhost:5000"; // Update with your backend server URL
 
-const ChatLayout = ({ chatCode, currentUser }) => {
+const ChatLayout = ({ chatCode, currentUser , otherUser}) => {
   const [messages, setMessages] = useState([]);
   const [currentMessage, setCurrentMessage] = useState("");
   const socketRef = useRef(null);
   const messagesEndRef = useRef(null);
   const room = chatCode; // Use chatCode as room name
-  const currentUserAvatar = "https://i.pravatar.cc/150?img=3"; // Placeholder avatar
-  const otherUserAvatar = "https://i.pravatar.cc/150?img=5"; // Placeholder avatar for others
+  const currentUserAvatar = "/curr.png"; // Placeholder avatar
+  const otherUserAvatar = "/other.png"; // Placeholder avatar for others
 
   useEffect(() => {
     // Initialize Socket.io connection
@@ -120,7 +120,8 @@ const ChatLayout = ({ chatCode, currentUser }) => {
                         }`}
                       >
                         <div className="message-content">
-                          <strong>{msg.sender}</strong>
+                        <strong>{isOwnMessage ? "You" : msg.sender}</strong>
+
                           <p>{msg.text}</p>
                         </div>
                         <span className="message-timestamp">

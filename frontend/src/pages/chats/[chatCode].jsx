@@ -1,20 +1,16 @@
-// pages/chats/[chatCode].jsx
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import BoilerPlate from '@/components/BoilerPlate';
-import ChatLayout from '@/components/ChatLayout.jsx'; // Import the updated ChatLayout
-// import { getCurrentUser } from '@/utils/auth'; // Example function to get current user
+import BoilerPlate2 from '@/components/BoilerPlate2';
+import ChatLayout from '@/components/ChatLayout.jsx';
 
 const ChatRoom = () => {
   const router = useRouter();
   const { chatCode } = router.query;
   const [chat, setChat] = useState(null);
-  // const [currentUser, setCurrentUser] = useState("You"); // Replace with actual user data
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currUser, setCurrUser] = useState(null);
-  const [error, setError] = useState(null); // Define error state
-  const [isLoading, setIsLoading] = useState(true); // Loading state
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const checkAuth = async () => {
     try {
@@ -26,11 +22,7 @@ const ChatRoom = () => {
       if (response.ok) {
         const data = await response.json();
         setIsLoggedIn(data.isAuthenticated);
-        setCurrUser(data.user || null); // Safely set user
-
-        if (data.isAuthenticated && data.userId) {
-          // Optionally, you can fetch additional user data here
-        }
+        setCurrUser(data.user || null);
       } else {
         setIsLoggedIn(false);
         setCurrUser(null);
@@ -44,37 +36,22 @@ const ChatRoom = () => {
       setIsLoading(false);
     }
   };
+
   useEffect(() => {
     checkAuth();
-  },[]);
-  
-  // useEffect(() => {
-  //   // Fetch current user data (replace with your auth logic)
-  //   const fetchUser = async () => {
-  //     const user = await getCurrentUser(); // Implement this function based on your auth setup
-  //     if (user) {
-  //       setCurrentUser(user.username); // Adjust based on your user object
-  //     } else {
-  //       setCurrentUser("You"); // Fallback or redirect to login
-  //     }
-  //   };
-
-  //   fetchUser();
-  // }, []);
+  }, []);
 
   useEffect(() => {
     if (chatCode) {
-      // Fetch chat details
       const fetchChat = async () => {
         try {
           const response = await fetch(`http://localhost:5000/api/chats/${chatCode}`);
           if (response.ok) {
             const data = await response.json();
             setChat(data);
-            // Additional logic if needed
           } else {
             alert('Chat room not found');
-            router.push('/chats/create'); // Redirect if chat not found
+            router.push('/chats/create');
           }
         } catch (error) {
           console.error('Error fetching chat:', error);
@@ -86,20 +63,39 @@ const ChatRoom = () => {
     }
   }, [chatCode, router]);
 
-  if (!chat) {
+  if (isLoading) {
     return (
-      <BoilerPlate>
+      <BoilerPlate2>
         <div className="container mt-5">
           <p>Loading chat room...</p>
         </div>
-      </BoilerPlate>
+      </BoilerPlate2>
     );
   }
 
   return (
-      <ChatLayout chatCode={chatCode} currentUser={currUser.username} />
+    <BoilerPlate2>
+      {currUser ? (
+        <ChatLayout chatCode={chatCode} currentUser={currUser.username} />
+      ) : (
+        <div className="d-flex align-items-center justify-content-center vh-100">
+  <div className="text-center">
+    <p className="text-white mb-3" style={{ fontSize: '1.5rem' }}>
+      User not authenticated. Please log in.
+    </p>
+    <button 
+      type="button" 
+      className="btn btn-dark btn-lg"
+      onClick={() => router.push('/auth/login')} // Adjust the route as needed
+    >
+      Login &#8594;
+    </button>
+  </div>
+</div>
+
+      )}
+    </BoilerPlate2>
   );
 };
 
 export default ChatRoom;
-
