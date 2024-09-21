@@ -8,10 +8,6 @@ This project utilizes several key libraries and technologies. Below is a list of
   - *Purpose*: Framework for server-rendered React applications.
   - *Rationale*: Provides optimal performance, and a streamlined development experience, with functionalities of React
 
-- **React**
-  - *Purpose*: JavaScript library for building user interfaces.
-  - *Rationale*: Enables the creation of dynamic and responsive UI components.
-
 ## Backend
 
 - **Node.js**
@@ -73,6 +69,8 @@ This project utilizes several key libraries and technologies. Below is a list of
 - **Axios**: For making HTTP requests from the frontend to the backend.
 - **bcrypt**: For hashing user passwords securely.
 - **dotenv**: For managing environment variables.
+- **uuid**: For generating unique uids.
+- **crypto**: For generating OTP
 
 ## Rationale Summary
 Each chosen technology and library aligns with the project’s requirements for performance, scalability, maintainability, and user experience. The stack ensures a seamless development process while providing robust features necessary for a modern messaging service.

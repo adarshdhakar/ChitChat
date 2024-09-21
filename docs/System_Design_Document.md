@@ -98,5 +98,3 @@ Chit Chat is a real-time messaging service designed to facilitate seamless commu
 
 
 
-
-
