@@ -1,4 +1,5 @@
 // backend/uploadImage.js
+const cloudinary = require('./cloudinaryConfig.js');
 const uploadImage = async (file) => {
   return new Promise((resolve, reject) => {
     cloudinary.uploader.upload_stream(
