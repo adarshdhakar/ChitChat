@@ -1,9 +1,9 @@
 # Chit Chat - Messaging Service
 
-![Chit Chat Banner](docs\images\1.png) <!-- Banner Image -->
-(docs\images\2.png)
-(docs\images\3.png)
-(docs\images\4.png)
+![Chit Chat Banner](docs/images/1.png) <!-- Banner Image -->
+![Sample Image 2](docs/images/2.png)
+![Sample Image 3](docs/images/3.png)
+![Sample Image 4](docs/images/4.png)
 
 ## Author
 **Adarsh Dhakar**  
@@ -34,25 +34,25 @@ The application includes optional features like an AI-powered chatbot and video 
 ## Features
 ### Core Features
 - User registration and authentication
-(docs\images\5.png)
-(docs\images\6.png)
+  ![Feature Image 5](docs/images/5.png)
+  ![Feature Image 6](docs/images/6.png)
 - Sending and receiving text messages
 - Group chat functionality
-(docs\images\7.png)
-(docs\images\9.png)
-(docs\images\11.png)
-(docs\images\1.png)
+  ![Feature Image 7](docs/images/7.png)
+  ![Feature Image 9](docs/images/9.png)
+  ![Feature Image 11](docs/images/11.png)
+  ![Feature Image 1](docs/images/1.png)
 - Real-time message updates
-(docs\images\10.png)
-(docs\images\12.png)
-(docs\images\13.png)
+  ![Feature Image 10](docs/images/10.png)
+  ![Feature Image 12](docs/images/12.png)
+  ![Feature Image 13](docs/images/13.png)
 - AI-powered chatbot
-(docs\images\8.png)
+  ![Feature Image 8](docs/images/8.png)
 - Video/Voice calling
-(docs\images\14.png)
+  ![Feature Image 14](docs/images/14.png)
 - About and Contact Us Section
-(docs\images\15.png)
-(docs\images\16.png)
+  ![Feature Image 15](docs/images/15.png)
+  ![Feature Image 16](docs/images/16.png)
 
 ## System Design
 For a detailed system design, refer to the [System Design Document](./docs/System_Design_Document.md).
