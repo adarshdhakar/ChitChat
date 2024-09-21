@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <td><img src="docs/images/1.png" alt="Chit Chat Banner" width="300"></td>
-    <td><img src="docs/images/2.png" alt="Sample Image 2" width="300"></td>
+    <td><img src="docs/images/1.png" alt="Chit Chat Banner" width="500"></td>
+    <td><img src="docs/images/2.png" alt="Sample Image 2" width="500"></td>
   </tr>
 </table>
 <table>
   <tr>
-    <td><img src="docs/images/3.png" alt="Chit Chat Banner" width="300"></td>
-    <td><img src="docs/images/4.png" alt="Sample Image 2" width="300"></td>
+    <td><img src="docs/images/3.png" alt="Chit Chat Banner" width="500"></td>
+    <td><img src="docs/images/4.png" alt="Sample Image 2" width="500"></td>
   </tr>
 </table>
 
