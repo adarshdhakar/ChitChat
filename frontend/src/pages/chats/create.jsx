@@ -75,7 +75,7 @@ const CreateChat = () => {
         console.error('Failed to create chat room', errorData);
       }
     } catch (error) {
-      alert('Error creating chat room');
+      // alert('Error creating chat room');
       console.error('Error creating chat room:', error);
     }
   };

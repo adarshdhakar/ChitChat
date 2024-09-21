@@ -4,7 +4,7 @@ let socket;
 
 const initiateSocket = () => {
   if (!socket) {
-    socket = io("http://localhost:5000"); // Replace with your backend URL if different
+    socket = io("http://localhost:5000");
     console.log("Connecting socket...");
   }
 };

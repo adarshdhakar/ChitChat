@@ -85,7 +85,6 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-// const MONGO_URL = process.env.MONGODB_URI || "mongodb://localhost:27017/messenger";
 const dbUrl = process.env.ATLASDB_URL;
 
 async function main() {

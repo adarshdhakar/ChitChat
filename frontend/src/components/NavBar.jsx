@@ -32,27 +32,6 @@ const Navbar = () => {
     }
   };
 
-  // const findUser = async (userId) => {
-  //   console.log('Finding user with ID:', userId); // Debug line
-  //   try {
-  //     const response = await fetch(`http://localhost:5000/api/users/${userId}`, {
-  //       method: 'GET',
-  //       credentials: 'include',
-  //     });
-
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       console.log('User data:', data); // Debug line
-  //       setCurrUser(data);
-  //     } else {
-  //       console.log('Failed fetching userdata');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error fetching userdata:', error);
-  //   }
-  // };
-  
-
   useEffect(() => {
     checkAuth();
   }, []);
