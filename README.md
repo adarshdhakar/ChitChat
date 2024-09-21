@@ -47,6 +47,10 @@ The application includes optional features like an AI-powered chatbot and video 
     <td><img src="docs/images/5.png" alt="Sample Image 5" width="500"></td>
     <td><img src="docs/images/6.png" alt="Sample Image 6" width="500"></td>
   </tr>
+  <tr>
+    <td><img src="docs/images/18.png" alt="Sample Image 18" width="500"></td>
+    <td><img src="docs/images/17.png" alt="Sample Image 17" width="500"></td>
+  </tr>
 </table>
 - Sending and receiving text messages
 - Group chat functionality
@@ -58,7 +62,7 @@ The application includes optional features like an AI-powered chatbot and video 
 </table>
   <table style="width:100%; text-align:center;">
   <tr>
-    <td><img src="docs/images/11.png" alt="Sample Image 11" width="500"></td>
+    <td><img src="docs/images/11.png" alt="Sample Image 11" width="400"></td>
   </tr>
 </table>
 - Real-time message updates
@@ -70,19 +74,19 @@ The application includes optional features like an AI-powered chatbot and video 
 </table>
   <table style="width:100%; text-align:center;">
   <tr>
-    <td><img src="docs/images/13.png" alt="Sample Image 13" width="500"></td>
+    <td><img src="docs/images/13.png" alt="Sample Image 13" width="400"></td>
   </tr>
 </table>
 - AI-powered chatbot
   <table style="width:100%; text-align:center;">
   <tr>
-    <td><img src="docs/images/8.png" alt="Sample Image 8" width="500"></td>
+    <td><img src="docs/images/8.png" alt="Sample Image 8" width="400"></td>
   </tr>
 </table>
 - Video/Voice calling
   <table style="width:100%; text-align:center;">
   <tr>
-    <td><img src="docs/images/14.png" alt="Sample Image 14" width="500"></td>
+    <td><img src="docs/images/14.png" alt="Sample Image 14" width="400"></td>
   </tr>
 </table>
 - About and Contact Us Section
