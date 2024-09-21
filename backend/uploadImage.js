@@ -1,10 +1,4 @@
 // backend/uploadImage.js
-const cloudinary = require('./cloudinaryConfig.js');
-console.log('Cloudinary Configuration:', {
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
 const uploadImage = async (file) => {
   return new Promise((resolve, reject) => {
     cloudinary.uploader.upload_stream(
