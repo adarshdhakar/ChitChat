@@ -8,8 +8,8 @@
 </table>
 <table>
   <tr>
-    <td><img src="docs/images/3.png" alt="Chit Chat Banner" width="500"></td>
-    <td><img src="docs/images/4.png" alt="Sample Image 2" width="500"></td>
+    <td><img src="docs/images/3.png" alt="Sample Image 3" width="500"></td>
+    <td><img src="docs/images/4.png" alt="Sample Image 4" width="500"></td>
   </tr>
 </table>
 
@@ -42,25 +42,56 @@ The application includes optional features like an AI-powered chatbot and video 
 ## Features
 ### Core Features
 - User registration and authentication
-  ![Feature Image 5](docs/images/5.png)
-  ![Feature Image 6](docs/images/6.png)
+  <table>
+  <tr>
+    <td><img src="docs/images/5.png" alt="Sample Image 5" width="500"></td>
+    <td><img src="docs/images/6.png" alt="Sample Image 6" width="500"></td>
+  </tr>
+</table>
 - Sending and receiving text messages
 - Group chat functionality
-  ![Feature Image 7](docs/images/7.png)
-  ![Feature Image 9](docs/images/9.png)
-  ![Feature Image 11](docs/images/11.png)
-  ![Feature Image 1](docs/images/1.png)
+  <table>
+  <tr>
+    <td><img src="docs/images/7.png" alt="Sample Image 7" width="500"></td>
+    <td><img src="docs/images/9.png" alt="Sample Image 9" width="500"></td>
+  </tr>
+</table>
+  <table>
+  <tr>
+    <td><img src="docs/images/11.png" alt="Sample Image 11" width="500"></td>
+  </tr>
+</table>
 - Real-time message updates
-  ![Feature Image 10](docs/images/10.png)
-  ![Feature Image 12](docs/images/12.png)
-  ![Feature Image 13](docs/images/13.png)
+  <table>
+  <tr>
+    <td><img src="docs/images/10.png" alt="Sample Image 10" width="500"></td>
+    <td><img src="docs/images/12.png" alt="Sample Image 12" width="500"></td>
+  </tr>
+</table>
+  <table>
+  <tr>
+    <td><img src="docs/images/13.png" alt="Sample Image 13" width="500"></td>
+  </tr>
+</table>
 - AI-powered chatbot
-  ![Feature Image 8](docs/images/8.png)
+  <table>
+  <tr>
+    <td><img src="docs/images/8.png" alt="Sample Image 8" width="500"></td>
+  </tr>
+</table>
 - Video/Voice calling
-  ![Feature Image 14](docs/images/14.png)
+  <table>
+  <tr>
+    <td><img src="docs/images/14.png" alt="Sample Image 14" width="500"></td>
+  </tr>
+</table>
 - About and Contact Us Section
-  ![Feature Image 15](docs/images/15.png)
-  ![Feature Image 16](docs/images/16.png)
+<table>
+  <tr>
+    <td><img src="docs/images/15.png" alt="Sample Image 15" width="500"></td>
+    <td><img src="docs/images/16.png" alt="Sample Image 16" width="500"></td>
+  </tr>
+</table>
 
 ## System Design
 For a detailed system design, refer to the [System Design Document](./docs/System_Design_Document.md).
