@@ -1,9 +1,17 @@
 # Chit Chat - Messaging Service
 
-![Chit Chat Banner](docs/images/1.png) <!-- Banner Image -->
-![Sample Image 2](docs/images/2.png)
-![Sample Image 3](docs/images/3.png)
-![Sample Image 4](docs/images/4.png)
+<table>
+  <tr>
+    <td><img src="docs/images/1.png" alt="Chit Chat Banner" width="300"></td>
+    <td><img src="docs/images/2.png" alt="Sample Image 2" width="300"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src="docs/images/3.png" alt="Chit Chat Banner" width="300"></td>
+    <td><img src="docs/images/4.png" alt="Sample Image 2" width="300"></td>
+  </tr>
+</table>
 
 ## Author
 **Adarsh Dhakar**  
