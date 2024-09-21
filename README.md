@@ -1,5 +1,10 @@
 # Chit Chat - Messaging Service
 
+![Chit Chat Banner](docs\images\1.png) <!-- Banner Image -->
+(docs\images\2.png)
+(docs\images\3.png)
+(docs\images\4.png)
+
 ## Author
 **Adarsh Dhakar**  
 IIT Bhubaneswar  
@@ -29,11 +34,25 @@ The application includes optional features like an AI-powered chatbot and video 
 ## Features
 ### Core Features
 - User registration and authentication
+(docs\images\5.png)
+(docs\images\6.png)
 - Sending and receiving text messages
 - Group chat functionality
+(docs\images\7.png)
+(docs\images\9.png)
+(docs\images\11.png)
+(docs\images\1.png)
 - Real-time message updates
+(docs\images\10.png)
+(docs\images\12.png)
+(docs\images\13.png)
 - AI-powered chatbot
+(docs\images\8.png)
 - Video/Voice calling
+(docs\images\14.png)
+- About and Contact Us Section
+(docs\images\15.png)
+(docs\images\16.png)
 
 ## System Design
 For a detailed system design, refer to the [System Design Document](./docs/System_Design_Document.md).
