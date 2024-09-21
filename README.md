@@ -56,31 +56,31 @@ The application includes optional features like an AI-powered chatbot and video 
     <td><img src="docs/images/9.png" alt="Sample Image 9" width="500"></td>
   </tr>
 </table>
-  <table>
+  <table style="text-align:center;">
   <tr>
     <td><img src="docs/images/11.png" alt="Sample Image 11" width="500"></td>
   </tr>
 </table>
 - Real-time message updates
-  <table>
+  <table style="text-align:center;">
   <tr>
     <td><img src="docs/images/10.png" alt="Sample Image 10" width="500"></td>
     <td><img src="docs/images/12.png" alt="Sample Image 12" width="500"></td>
   </tr>
 </table>
-  <table>
+  <table style="text-align:center;">
   <tr>
     <td><img src="docs/images/13.png" alt="Sample Image 13" width="500"></td>
   </tr>
 </table>
 - AI-powered chatbot
-  <table>
+  <table style="text-align:center;">
   <tr>
     <td><img src="docs/images/8.png" alt="Sample Image 8" width="500"></td>
   </tr>
 </table>
 - Video/Voice calling
-  <table>
+  <table style="text-align:center;">
   <tr>
     <td><img src="docs/images/14.png" alt="Sample Image 14" width="500"></td>
   </tr>
