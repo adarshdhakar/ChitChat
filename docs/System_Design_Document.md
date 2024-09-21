@@ -57,7 +57,7 @@ Chit Chat is a real-time messaging service designed to facilitate seamless commu
 
 ## REST API Endpoints
 
-## API Endpoints
+## API Endpoints (REST APIs)
 
 ### Authentication
 | Endpoint                | Method | Description                        |

@@ -126,7 +126,7 @@ The application will be available at http://localhost:3000.
 ## Deployment
 This application is deployed on (https://render.com). You can access it at (https://chitchat-wryj.onrender.com/).
 
-## API Endpoints
+## API Endpoints (REST APIs)
 ### Authentication
 - Login: POST /api/auth/login
 - Signup: POST /api/auth/signup
