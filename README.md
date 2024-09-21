@@ -109,13 +109,13 @@ For a detailed system design, refer to the [System Design Document](./docs/Syste
 3. Configure environment variables (create a .env file):
 - NEXT_PUBLIC_SOCKET_URL=<http://localhost:3000>
 - NEXT_PUBLIC_API_URL=<http://localhost:5000>
-- CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
-- CLOUDINARY_API_KEY=<your-cloudinary-api-key>
-- CLOUDINARY_API_SECRET=<your-api-secret>
-- EMAIL_USER=<your-gmail-id>
-- EMAIL_PASS=<your-gmail-app-password>
-- ATLASDB_URL=<your-atlasdb-url>
-- SECRET=<your-session-secret>
+- CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
+- CLOUDINARY_API_KEY=your-cloudinary-api-key
+- CLOUDINARY_API_SECRET=your-api-secret
+- EMAIL_USER=your-gmail-id
+- EMAIL_PASS=your-gmail-app-password
+- ATLASDB_URL=your-atlasdb-url
+- SECRET=your-session-secret
 
 4. Run the application:
     ```bash
