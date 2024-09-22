@@ -72,8 +72,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 30%;
-  height: 600px;
+  width: 25%;
+  height: 500px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;

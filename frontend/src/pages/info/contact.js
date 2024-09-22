@@ -7,8 +7,7 @@ const Contact = () => {
             <div className="container mt-5">
             <h1 className="mb-4">Contact Us</h1>
             <p>If you have any questions or feedback, feel free to reach out to us. We're here to help!</p>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                
+            <form action="mailto:chitchathelpdesk@gmail.com" method="post" enctype="text/plain">
                 <div className="mb-3 col-md-12">
                     <label className="form-label">Email</label>
                     <input type="email" className="form-control" name="email" required />
@@ -25,8 +24,8 @@ const Contact = () => {
             </form>
             <h2 className="mt-5 text-light">Alternative Contact</h2>
             <div>
-                <p className="text-light">Email: <a href="mailto:support@example.com">support@example.com</a></p>
-            <p className="text-light">Phone: +1-234-567-890</p>
+                <p className="text-light">Email: <a href="mailto:chitchathelpdesk@gmail.com">chitchathelpdesk@gmail.com</a></p>
+            <p className="text-light">Phone: +91 9340928459</p>
             </div>
             <div>
                 
