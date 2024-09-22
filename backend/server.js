@@ -119,8 +119,7 @@ const sessionOptions = {
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000, // 1 week
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production',
+
   },
 };
 
@@ -162,7 +161,7 @@ passport.deserializeUser(async (id, done) => {
 app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/chats', chatRouter);
-app.use('/api/page', infoRouter);
+// app.use('/api/page', infoRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello from backend!');

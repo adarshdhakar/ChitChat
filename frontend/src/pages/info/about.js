@@ -19,10 +19,10 @@ const About = () => {
                         </div>
                         {/* Add more team members here */}
                     </div>
-                    <h2 className="text-dark">Our Story</h2>
-                    <p className="text-dark">Chat Forge was created with the vision of bringing people closer through innovative messaging solutions. Our journey began with a simple idea and has evolved into a comprehensive platform used by thousands.</p>
-                    <h2 className="text-dark">What's Next</h2>
-                    <p className="text-dark">We are continuously working on enhancing our platform with new features and improvements. Stay tuned for updates!</p>
+                    <h2 className="text-secondary">Our Story</h2>
+                    <p className="text-secondary">Chat Forge was created with the vision of bringing people closer through innovative messaging solutions. Our journey began with a simple idea and has evolved into a comprehensive platform used by thousands.</p>
+                    <h2 className="text-secondary">What's Next</h2>
+                    <p className="text-secondary">We are continuously working on enhancing our platform with new features and improvements. Stay tuned for updates!</p>
                 </div>
         </BoilerPlate>
     );

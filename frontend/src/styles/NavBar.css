@@ -1,6 +1,11 @@
 /* Navbar CSS */
 
 /* Adjustments for custom styling */
+
+.navbar {
+  z-index: 1000;
+}
+
 .custom-navbar {
   background-color: #1F2833;
   height: 70px;
@@ -44,6 +49,11 @@
 .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #66FCF1;
   color: #0B0C10;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 /* Profile icon */

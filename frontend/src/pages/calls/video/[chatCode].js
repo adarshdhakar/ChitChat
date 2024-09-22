@@ -190,7 +190,7 @@ const VideoCallPage = () => {
                 ))}
             </div>
             <div className={styles.controls}>
-                <Link href={`/chat/${chatCode}`}>
+                <Link href={`/chats/${chatCode}`}>
                     <button className={styles.leaveButton}>Leave Call</button>
                 </Link>
             </div>

@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-7 mb-3">
             <h5>Contact Us</h5>
-            <p>Email: support@chitchat.com</p>
-            <p>Phone: +123 456 7890</p>
+            <p>Email: chitchathelpdesk@gmail.com</p>
+            <p>Phone: +91 9340928459</p>
           </div>
           <div className="col-md-5 mb-3">
             <h5>Newsletter Signup</h5>
@@ -50,9 +50,9 @@ const Footer = () => {
             <h5>Follow Us</h5>
             <div className = "d-flex justify-content-center">
             <div className="d-flex">
-            <a href="#" className="text-light me-2"><FaTwitter size={24} /></a>
-            <a href="#" className="text-light me-2"><FaFacebookF size={24} /></a>
-            <a href="#" className="text-light"><FaInstagram size={24} /></a>
+            <a href="https://x.com/ChitChat277" className="text-light me-2"><FaTwitter size={24} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61565937550762&is_tour_completed" className="text-light me-2"><FaFacebookF size={24} /></a>
+            <a href="https://www.instagram.com/" className="text-light"><FaInstagram size={24} /></a>
             </div>
             </div>
         </div>

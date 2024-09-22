@@ -81,10 +81,10 @@ const Navbar = () => {
               <a className="nav-link" href="/ai">AI Assist</a>
             </li>
             <li className="nav-item">
-              <Link href="info/about" passHref className="nav-link" aria-current="page">About</Link>
+              <Link href="/info/about" passHref className="nav-link" aria-current="page">About</Link>
             </li>
             <li className="nav-item">
-              <Link href="info/contact" passHref className="nav-link" aria-current="page">Contact</Link>
+              <Link href="/info/contact" passHref className="nav-link" aria-current="page">Contact</Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
